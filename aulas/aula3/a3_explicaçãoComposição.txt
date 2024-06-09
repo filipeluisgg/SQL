@@ -1,0 +1,1 @@
+Banco de dados contém tabelas, tabelas contem registros e registros são compostos por campos.

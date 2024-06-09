@@ -1,0 +1,55 @@
+
+banco de dados == schema/database
+
+As linhas, são tuplas, ou registros.
+As colunas, são os campos, ou atributos.
+
+dump == cópia do schema(banco de dados)
+
+
+
+describe/desc nome_tabela;  #mostra as especificações das colunas da tabela selecionada
+
+
+select * from nome_tabela;  #mostra todos os dados da tabela
+
+O comando SELECT, é um dos mais usados do banco de dados, e pode ser ampliado do que só o exemplo acima:
+
+select ano, nome, carga from cursos
+where carga < '60' and ano >= '2016'     ## Mostrará apenas as linhas que estarão cumprindo as condições pedidas.
+order by ano, nome;      		 ## Mostrará na ordem selecionada, apenas as colunas ano, nome, carga. E ordenará por prioridade ano, nome.
+			 		 ## Pode-se usar operadores relacionais(>=, !=, <, =, >, <=).
+
+OPERADORES alfabéticos: betwen, like.
+
+O operador like, pode ser usado no select como um 'semelhante':
+select * from pessoas
+where nome not like '%A%'; 		     ## Mostrará os campos das pessoas que não tem 'A' no nome, por causa do not no comando.
+
+o % é um caractere coringa, assim como o _ (sublinhado) que significa 'alguma coisa' literalmente.
+
+O distinct serve para listar uma coluna, sem repetir o valor da mesma, se houver valores repetidos.
+
+select count/max(carga) from cursos          ## Mostrará quantos(count) ou qual a maior carga(max) tem a tabela cursos.
+
+HAVING:
+
+select ano, count(*) from cursos       ## Mostrará os anos 
+where totaulas > 30		       ## Selecionando apenas os cursos com mais de 30 aulas
+group by ano			       ## Agrupando por ano
+having ano > 2013		       ## Dentro do agrupamento, só mostrar quem tem ano acima de 2013(só pode usar o mesmo campo do grupo 'by'
+order by count(*) desc;		       ## ...
+
+
+
+join = O join é apenas uma junção. Deve ser usado com a cláusula 'on'.
+
+select pessoas.nome, cursos.nome, cursos.ano
+from pessoas join cursos
+on cursos.idcurso = pessoas.cursopreferido
+order by gafanhotos.nome;
+
+
+Sobre a engine InnoDB,, ela tem duas funcionalidades: 
+1- Permitir a compatibilidade, o uso de chaves estrangeiras. Pois garantem a integridade referencial.
+2- Permitem também a compatibilidade com os 4 conceitos fundamentais para uma boa transação.

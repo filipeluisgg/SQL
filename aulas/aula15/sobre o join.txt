@@ -1,0 +1,4 @@
+O join é usado para fazer junções, su escrito apenas como 'join' terá o comportamento de um 'inner join'.
+O right join prioriza a tabela da esquerda do mesmo.
+O left join prioriza a tabela da direita do mesmo.
+O outer join mostrará também as linhas que não tem correspondência nas tabelas selecionadas. 

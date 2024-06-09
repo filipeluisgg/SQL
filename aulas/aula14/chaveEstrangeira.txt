@@ -1,0 +1,3 @@
+Chave estrangeira
+
+A chave estrangeira é uma chave primária que veio de algum outro lugar, e se tornou uma chave estrangeira.
