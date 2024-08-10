@@ -1,0 +1,6 @@
+Para reiniciar a contagem de uma PK(primary key) de uma tabela, ela deve estar sem nenhum registro dentro dela(delete nome_tabela).
+
+Após isso, o comando abaixo reinicará a contagem da PK, para inserção de novos dados:
+
+
+DBCC checkident ('nome_tabela', reseed, 0);

@@ -1,0 +1,10 @@
+Para mostrar diversas informações sobre tal tabela:
+
+sp_helpdb nomeDataBase
+
+
+
+
+Este comando mostra, do banco de dados, as informações:
+
+propietário, o espaço que ele ocupa no HDD, a data de criação do mesmo, etc...

@@ -1,0 +1,10 @@
+Para mostrar diversas informações sobre tal tabela:
+
+sp_help nomeTabela
+
+
+
+
+Este comando mostra, da tabela, as informações:
+
+propietário, data de criação, nome e especificações das colunas, se é a tabela da chave primária, qual é a chave primária, etc...

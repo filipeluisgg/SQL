@@ -18,9 +18,9 @@ O comando SELECT, é um dos mais usados do banco de dados, e pode ser ampliado d
 select ano, nome, carga from cursos
 where carga < '60' and ano >= '2016'     ## Mostrará apenas as linhas que estarão cumprindo as condições pedidas.
 order by ano, nome;      		 ## Mostrará na ordem selecionada, apenas as colunas ano, nome, carga. E ordenará por prioridade ano, nome.
-			 		 ## Pode-se usar operadores relacionais(>=, !=, <, =, >, <=).
+			 		 ## Pode-se usar operadores relacionais(>=, <> ou !=, <, =, >, <=).
 
-OPERADORES alfabéticos: betwen, like.
+OPERADORES alfabéticos: between, like.
 
 O operador like, pode ser usado no select como um 'semelhante':
 select * from pessoas

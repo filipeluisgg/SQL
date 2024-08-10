@@ -1,0 +1,30 @@
+Tabelas temporárias são tabelas que eu posso criar para fazer o que me convém, seja uma junção de dados, ou algo assim.
+
+
+Há dois tipos de tabelas temporárias, as locais e as globais.
+
+Tabelas temporárias locais: 
+Visíveis apenas para a seção(query) que foi criada.
+
+
+Tabelas temporárias globais:
+Visíveis para todas as seções(querys).
+
+
+
+
+Para criar uma tabela temporária LOCAL:
+
+select * into #nomeTabelaTemp from nomeTabelaExistente
+
+
+Para criar uma tabela temporária GLOBAL:
+
+select * into ##nomeTabelaTemp from nomeTabelaExistente
+
+
+
+O comando acima criará a tabela temporária que herdará os dados da tabela já existente, uma local, e outra global.
+Ou podemos criar do zero, de forma tradicional uma tabela temporária, local ou global, usando o CREATE TABLE....
+Ao desligar o servidor ou fechar a query, as tabelas temporárias serão destruídas, por isso são temporárias!
+
