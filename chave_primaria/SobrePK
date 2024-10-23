@@ -1,0 +1,4 @@
+Ao termos um relacionamento 1 para 1:
+
+Manter a PK na tabela que tem a entidade mais forte pode ser uma prática recomendada para simplificar a estrutura e evitar redundâncias.
+
